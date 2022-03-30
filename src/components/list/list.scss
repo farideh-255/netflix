@@ -1,0 +1,51 @@
+.list{
+    width: 100%;
+    margin-top: 0.8rem;
+
+    .listTitle{
+        color:#fff;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-left: 1rem;
+    }
+    .wrapper{
+        position: relative;
+        .container{
+            margin-left: 1.2rem;
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            overflow: hidden;
+
+            .absoluteContainer{
+                position: relative;
+                left:0;
+                display: flex;
+                width: max-content;
+                transition: left 1s ease;
+            }
+        }
+
+        .sliderArrow{
+            width:1.2rem;
+            height: 100%;
+            background-color: rgb(22,22,22 ,0.5);
+            color:#fff;
+            position: absolute;
+            z-index: 99;
+            top:0;
+            bottom: 0;
+            margin: auto;
+            cursor:pointer;
+            
+            &.left{
+                left:0;
+            }
+            &.right{
+                right:0;
+            }
+        }
+    }
+
+ }
