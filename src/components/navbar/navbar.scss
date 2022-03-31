@@ -1,11 +1,11 @@
 .navbar{
      color:#fff;
-     position: sticky;
+     position:fixed;
      top:0px;
      width: 100%;
      z-index: 999;
      /*background-color:var(--main-color) ;*/
-     background: linear-gradient(to top,transparent 0%, rgb(0,0,0,0.7) 80%);
+     background: linear-gradient(to top,transparent 0%, rgb(0,0,0,0.8) 90%);
 
      .container{
          padding:0.5rem 3rem;
