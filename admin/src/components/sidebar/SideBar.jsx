@@ -6,6 +6,7 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 import ArticleIcon from '@mui/icons-material/Article';
 import TimelineIcon from '@mui/icons-material/Timeline';
 import GroupIcon from '@mui/icons-material/Group';
+import { TabPanelUnstyled } from '@mui/base';
 
 export default function SideBar() {
   return (
@@ -36,8 +37,15 @@ export default function SideBar() {
               Sales
             </li>
             <li className="sidebar-list-item">
+             <Link to="/users" >
               <GroupIcon  className="list-icon"/>
               users
+              </Link>
+            </li>
+            <li className="sidebar-list-item">
+              <Link to="/movies" >
+               Movies
+              </Link>
             </li>
           </ul>
         </div>
