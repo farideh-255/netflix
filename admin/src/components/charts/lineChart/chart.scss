@@ -1,0 +1,20 @@
+.chart-container{
+    padding:20px;
+    margin:20px;
+    
+    box-shadow:0px 0px 15px -10px rgba(0,0,0,0.75);
+    -webkit-box-shadow:0px 0px 15px -10px rgba(0,0,0,0.75);
+    text-align: left;
+    margin-top:40px;
+
+    .chart{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 0.7rem;
+    }
+    h3{ font-weight: 200;}
+    
+
+    .chartTitle{
+        margin-bottom:20px ;
+    }
+}

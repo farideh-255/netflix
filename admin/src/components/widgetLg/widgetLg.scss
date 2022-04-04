@@ -1,0 +1,50 @@
+.widgetLg{
+    flex:2;
+    box-shadow:0px 0px 15px -10px rgba(0,0,0,0.75);
+    -webkit-box-shadow:0px 0px 15px -10px rgba(0,0,0,0.75);
+    padding: 20px;
+
+    .widgetLgTitle{ 
+        font-weight: 100;
+        color:#fff;
+    }
+
+    .widgetLgTable{
+        width:100%;
+        border-spacing: 10px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 0.9rem;
+           .widgetLgTr{display:flex; align-items:center; justify-content: space-between; margin:4px 0px;}
+           .widgetLgTr th{ color:grey; text-align: left;}
+           .widgetLgTr th, .widgetLgTr td{ text-align: center; display: flex; align-items: center;}
+           .widgetLgName{ padding-left: 10px;}
+
+            .widgetLgButton{
+                padding:5px 7px;
+                border:none;
+                border-radius: 10px;
+                font-size: 0.7rem;
+            }
+            .widgetLgButton.Approved{
+                background-color: #e5faf2;
+                color:#3bb077;
+            }
+
+            .widgetLgButton.Pending{
+                background-color: #fff0f1;
+                color:#d95087;
+            }
+
+            .widgetLgButton.Declined{
+                background-color: #ebf1fe;
+                color:#2a7ade;
+            }
+
+
+            .widgetLgUser img{
+                width:40px; height:40px; object-fit: cover;  border-radius:50%;
+            }
+            .widgetDate,.widgetAmount{ font-weight: 100;}
+    }
+    
+}
