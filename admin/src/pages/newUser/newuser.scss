@@ -1,0 +1,80 @@
+.new-user{
+    flex:4;
+
+    .newUserTitle{
+
+
+        .newUserForm{
+                padding: 2%;
+                display: flex;
+                margin-top: 5%;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+                font-size: 0.8rem;
+                box-sizing: border-box;
+                font-family:'Times New Roman', Times, serif;
+
+            .newUserItem{
+                min-width:200px;
+                width: 50%;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                margin-top: 10px;
+                
+                color: rgb(165, 155, 140);
+
+
+                label{
+                    margin-right: 20px;
+                    margin-left: 20px;
+                    margin-bottom: 5px;
+                }
+                input{
+                    height: 25px;
+                    padding: 5px 10px;
+                    border:1px solid #ccc;
+                    border-radius: 10px;
+                    outline: none;
+                    background:none;
+                    margin-right: 20px;
+                    margin-left: 20px;
+                    color:#ccc;
+                }
+                .newUserGender>input{
+                    font-size: 18px;
+                    color:#ccc;
+                }
+                .newUserGender{
+                    display: flex;
+                    align-items: center;
+                    justify-content:flex-start;
+                }
+
+                .newUserSelect{
+                    height: 35px;
+                    border-radius: 12px;
+                    background: none;
+                    color:#ccc;
+                    border:1px solid #ccc;
+                    margin-right: 20px;
+                    margin-left: 20px;
+                }
+            }
+
+
+            .newUserButton{
+                width: 200px;
+                border: none;
+                background-color: darkblue;
+                color: #fff;
+                font-weight: 600;
+                padding: 7px 10px;
+                border-radius: 10px;
+                margin-top: 30px;
+                cursor: pointer;
+            }
+        }
+    }
+}
