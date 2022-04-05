@@ -1,5 +1,5 @@
 import axios from "axios"
-import {loginStart, loginFailure , loginSuccess} from "./authActions"
+import {loginStart, loginFailure , loginSuccess,logout} from "./authActions"
 
 
 export const login=async(user,dispatch)=>{
@@ -10,4 +10,10 @@ export const login=async(user,dispatch)=>{
     }catch(err){
         dispatch(loginFailure());
     }
+}
+
+//myown codes
+
+export const logOutHandle=(dispatch)=>{
+    dispatch(logout)
 }
