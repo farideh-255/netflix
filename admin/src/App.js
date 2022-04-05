@@ -3,6 +3,7 @@ import './App.css';
 import RoutesComp from './routes/index.js';
 import {AuthContext, AuthContextProvider} from './context/authcontext/authContext';
 import {useContext} from 'react'
+import {MovieContext, MovieContextProvider} from './context/movieContext/MovieContext'
 
 import {
   BrowserRouter,
@@ -18,11 +19,13 @@ function App() {
 
   return (
     <AuthContextProvider>
+      <MovieContextProvider>
         <BrowserRouter>
 
               <RoutesComp />
             
         </BrowserRouter>
+       </MovieContextProvider>
     </AuthContextProvider>
   );
 }

@@ -52,7 +52,7 @@ console.log("userlist=>",userlist);
             {
                 newUsers.map(user=>(
                                         
-                    <li className="widgetSmListItem">
+                    <li className="widgetSmListItem" key={user.username}>
                         <img src="img/photo-1494790108377-be9c29b29330.jpg" alt="ok"  />
                         <div className="widgetSmUser">
                             <span className="widgetSmUsername">{user.username}</span>

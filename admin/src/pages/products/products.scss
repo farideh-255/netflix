@@ -1,0 +1,54 @@
+.userlist{
+    flex:4;
+    min-height: calc(100vh - 90px);
+    height: 100%;
+    padding: 3%;
+    h3{
+        padding:0px 0px 20px 0px;
+        font-weight: 200;
+    }
+}
+
+.css-3ihp42-MuiDataGrid-root{
+    color:#fff !important;
+}
+
+.css-3ihp42-MuiDataGrid-root{
+    border: 1px solid rgb(58 61 66)!important;
+}
+
+.css-11bfvty-MuiToolbar-root-MuiTablePagination-toolbar {
+    direction: ltr !important;
+    color:#fff;
+}
+
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root{
+    color:#fff !important;
+}
+
+.MuiDataGrid-row{
+ //   min-height:40px !important;
+   // line-height: 40px !important;
+}
+
+.css-204u17-MuiDataGrid-main{
+//    overflow: auto !important;
+  //  overflow-x:auto !important;
+}
+
+
+
+/************************actions***********************/
+.userListEdit{
+    margin-left: 4px 7px; padding: 5px 6px; border-radius:10px; color:#fff;
+    cursor: pointer; background-color: rgb(123, 179, 160);
+    border: none; outline: none;
+}
+.userListDelete{
+    margin-left: 4px 7px; border-radius:10px; color:rgb(218, 75, 75);
+    cursor: pointer; 
+    background: none; border: none; outline: none;
+}
+
+.avatar{width:40px; height: 40px; border-radius: 50%; margin: 0px 8px;}
+.list-td{ display: flex; align-items: center; justify-content: space-between;}

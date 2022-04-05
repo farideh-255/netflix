@@ -1,0 +1,166 @@
+.user-page{
+    flex:4;
+    padding: 20px;
+
+
+.userTitleContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .userTitle{
+    font-size: 1.5rem;
+    font-weight: 600;
+    }
+
+    .userAddButton{
+        width: 80px;
+        border:none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 5px;
+        background-color: teal;
+        color:white;
+        font-size: 0.7rem;
+    }
+  }
+
+  .userContainer{
+    display: flex;
+    margin-top: 20px;
+    .userShow{
+       flex:1; 
+       padding: 20px;
+       box-shadow:0px 0px 15px -10px rgba(0,0,0,0.75);
+       -webkit-box-shadow:0px 0px 15px -10px rgba(0,0,0,0.75);
+       font-family: 'Times New Roman', Times, serif;
+
+       .userShowTop{
+            display: flex;
+            align-items: center;
+
+        img{
+             width:40px;
+             height: 40px;
+             border-radius:50% ;
+             object-fit: cover;
+        }
+
+        .userShowTopTitle{
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            font-size: 0.7rem;
+
+            .userShowUsername{
+                font-weight: 600;
+            }
+
+            .userShowUserTitle{
+                font-weight: 300;
+            }
+
+        }
+       }
+
+       .userShowBottom{
+           margin-bottom:20px;
+
+            .userShowTitle{
+                font-size: 14px;
+                font-weight: 600;
+                color: darkgray;
+            }
+
+            .userShowInfo{
+               display: flex;
+               align-items: center;
+                margin:20px 0px;
+                padding:5px;
+                font-size: 0.8rem;
+                color:rgb(167, 167, 173);
+                .userShowInfoTitle{
+                    
+                }
+
+                .userShowIcon{
+                    font-size: 0.9rem;
+                    margin-right: 10px;
+                }
+            }
+
+       }
+    }
+
+    .userUpdate{
+        flex:2; 
+        padding: 20px;
+        margin-left: 20px;
+        box-shadow:0px 0px 15px -10px rgba(0,0,0,0.75);
+        -webkit-box-shadow:0px 0px 15px -10px rgba(0,0,0,0.75);
+
+        .userUpdateTitle{
+
+            font-size: 24px;
+            font-weight: 600;
+
+            .userUpdateForm{
+                display: flex;
+                justify-content: space-around;
+                margin-top: 10px;
+
+                .userUpdateLeft{
+
+                    .userUpdateItem{
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 15px;
+                        font-size: 0.8rem;
+                        text-align: left;
+                        font-family: 'Times New Roman', Times, serif;
+                        label{
+                            margin-bottom: 5px;
+                        }
+                        input{
+                            border:none;
+                            height:30px;
+                            width: 250px;
+                            border-bottom: 1px solid #999;
+                            background: none;
+                        }
+                    }
+
+                }
+
+                .userUpdateRight{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .userUpdateUpload{
+                        display: flex;
+                        align-items: center;
+
+                        img{
+                                width:100px; height:100px; border-radius: 12px;
+                                object-fit: cover;
+                        }
+
+                        .uploadIcon{cursor: pointer;}
+                    }
+                    .userUpdateButton{
+                        border:none; border-radius: 5px; padding: 5px;
+                        background-color: blue; color:#fff;
+                        font-weight: 600;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: rgb(0, 97, 97);
+                        }
+                    }
+                }
+            }
+        }
+     
+    }
+  }
+}
