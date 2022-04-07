@@ -81,6 +81,7 @@ router.get("/find/:id", async(req,res)=>{
 
 router.get("/", verify,async(req,res)=>{
 
+    console.log("req user=>",req.user);
     const query=req.query.new;
     if( req.user.isAdmin){     
              try{

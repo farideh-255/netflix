@@ -42,3 +42,47 @@
     }
 
  }
+
+
+
+  /*
+ export const getMovie=async(id)=>{
+    
+    try{
+       const res= await axios.get("/movies/find/"+id,
+                {headers:{
+                    token:"Bearer "+JSON.parse(localStorage.getItem("user")).accessToken
+                        }
+                }
+        );
+
+      //  console.log("api call res get movie for id=>",id,res.data);
+        return res.data;
+    }catch(err){
+        console.log(err);
+    }
+
+ }
+*/
+
+export const getMovie = (callback,id) => {
+
+   // try{
+        const res= axios.get("/movies/find/"+id,
+                 {headers:{
+                     token:"Bearer "+JSON.parse(localStorage.getItem("user")).accessToken
+                         }
+                 }
+         ).then(response => {
+            callback(response.data);
+        })
+ 
+         console.log("api call res get movie for id=>",id,res.data);
+         return res.data;
+   //  }catch(err){
+     //    console.log(err);
+    // }
+
+  }
+
+

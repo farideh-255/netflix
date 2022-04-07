@@ -3,7 +3,6 @@ import MovieReducer from './MovieReducer'
 
 const initialState={
     movies:[],
-   
     isFetching:false,
     error:false
 }

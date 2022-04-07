@@ -1,5 +1,4 @@
-
-import React,{ useState} from "react"
+import { useState } from "react"
 import {Link} from "react-router-dom"
 import './product.scss'
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
@@ -8,20 +7,19 @@ import EmailIcon from '@mui/icons-material/Email';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import LocationSearchingIcon from '@mui/icons-material/LocationSearching';
 import PublishIcon from '@mui/icons-material/Publish';
-//import storage from '../../firebase'
 
 
 
-export default function ProductComp({movieProp}) {
 
- const [movie,setMovie]=useState(null)
+
+export default function NewMovie({}) {
+
+    const [movie,setMovie]=useState(null)
     const [img,setImg]=useState(null)
-    const [imgTitle,setImgTitle]=useState(null)
+    const [imgTitle,setTitle]=useState(null)
     const [imgSm,setimgSm]=useState(null)
     const [trailer,setTrailer]=useState(null)
     const [video,setVideo]=useState(null)
-    const [uploaded,setUploaded]=useState(0)
-
 
   // console.log("mvie=>",movie);
 
@@ -30,73 +28,73 @@ export default function ProductComp({movieProp}) {
       setMovie({...movie, [e.target.name]:value});
   }
 
-  const upload=(items)=>{
-      
-     items.forEach(item=>{
-       console.log("upload file=>",item)
-        /* const uploadTask=storage.ref(`items/${item.file.name}`).put(item);
-          uploadTask.on("state_changes",
-            snapshot=>{
-              const progress=(snapshot.bytesTransferred/snapshot.totalBytes)*100;
-               console.log("upload progress ",progress);
-            },(err)=>{console.log(err)},
-            ()=>{
-                uploadTask.snapshot.ref.getDownloadURL().then(url=>{
-                  setMovie(prev=>{
-                      return {...prev,[item.label]:url};
-                  });
-                    setUploaded(prev=>prev+1)
-                });
-            })
-            */
-        })
-       
-  }
-
-  const handleUpload=(e)=>{
-      e.preventDefault();
-      upload([
-          {file:img, label:"img"},
-          {file:imgTitle, label:"imgTitle"},
-          {file:imgSm, label:"imgSm"},
-          {file:trailer, label:"trailer"},
-          {file:video, label:"video"},
-
-      ])
-  }
-
-  console.log(img);
+  console.log(movie);
 
   return (
     <div className='user-page'>
         <div className="userTitleContainer">
             <h1 className='userTitle'>Edit Movie</h1>
-            <Link to="/movie/newmovie">
+            <Link to="/newmovie">
             <button className="userAddButton">Create</button>
             </Link>
         </div>
         <div className="userContainer">
-    
+           {/* <div className="userShow">
+                <div className="userShowTop">
+                    <img src={`../img/${movie.img}`} alt="userpic" className='UserShowImage' />
+                    <div className="userShowTopTitle">
+                        <div className="userShowUsername">{movie.title}</div>
+                        <div className="userShowUserTitle">{movie.year}</div>
+                    </div>
+                </div>
+                <div className="userShowBottom">
+                    <span className="userShowTitle"> Details</span> 
+                        <div className="userShowInfo">
+                            <PermIdentityIcon  className='userShowIcon'/>
+                            <span className="userShowInfoTitle">{movie.title}</span>
+                        </div>
+                        <div className="userShowInfo">
+                            <CalendarTodayIcon  className='userShowIcon'/> 
+                            <div className="userShowInfoTitle">{movie.year}</div>
+                        </div>
+                        <div className="userShowInfo">
+                           <EmailIcon className='userShowIcon'/> 
+                            <div className="userShowInfoTitle">{movie.genre}</div>
+                        </div>
+                        <div className="userShowInfo">
+                            <PermIdentityIcon  className='userShowIcon'/>
+                            <div className="userShowInfoTitle">{movie.limit}</div>
+                        </div>
+                        <div className="userShowInfo">
+                            <LocationSearchingIcon  className='userShowIcon'/>
+                            <div className="userShowInfoTitle">{movie.isSeries ? "series" : "movie" }</div>
+                        </div>
+                        <div className="userShowInfo">
+                            <div className="userShowInfoTitle"></div>
+                        </div>
+                 </div>
+            </div>
+            */}
             <div className="userUpdate">
                 <div className="userUpdateTitle">
                     <div className="userUpdateForm">
-                    <div className="itemUpdateLeft">
+                        <div className="itemUpdateLeft">
                             
                             <div className="itemUpdateItem">
                                 <label>image1</label>
-                                <input type="file" name="img" onChange={e=>setImg(e.target.files[0])}
+                                <input type="file" name="img"
                                   className="userUpdateInput"
                                 />
                             </div>
                             <div className="itemUpdateItem">
                                 <label>image 2</label>
-                                <input type="file" name="imgTitle" onChange={e=>setImgTitle(e.target.files[0])}
+                                <input type="file" name="imgTitle"
                                   className="userUpdateInput"
                                 />
                             </div>
                             <div className="itemUpdateItem" >
                                 <label>image 3</label>
-                                <input type="file" name="imgSm" onChange={e=>setimgSm(e.target.files[0])}
+                                <input type="file" name="imgSm"
                                   className="userUpdateInput"
                                 />
                             </div>
@@ -145,29 +143,39 @@ export default function ProductComp({movieProp}) {
                             </div>
                             <div className="itemUpdateItem">
                                 <label>Trailer</label>
-                                <input type="file" name="trailer" onChange={e=>setTrailer(e.target.files[0])}
+                                <input type="file" name="trailer"  onChange={handleChange}
                                   className="userUpdateInput"
                                 />
                             </div>
 
                             <div className="itemUpdateItem">
                                 <label>video</label>
-                                <input type="file" name="video" onChange={e=>setVideo(e.target.files[0])}
+                                <input type="file" name="video" onChange={handleChange}
                                    className="userUpdateInput"
                                 />
                             </div>
-                            {uploaded===5 ? (
-                              <button className="userUpdateButton">CRATE</button>
-                             ):(
-                                <button className="userUpdateButton"
-                                onClick={handleUpload}>UPLOAD</button>
-                             )
-                            }
+                            <button className="userUpdateButton">UPDATE</button>
+                            
                         </div>
-                      
+                        {/*
+                        <div className="userUpdateRight">
+                            <div className="userUpdateUpload">
+                                <img src={process.env.PUBLIC_URL +"/img/pexels-ali-pazani-2613260.jpg"} alt="ok" className="userUpdateImg" />
+                                <label htmlFor="file" ><PublishIcon  className="uploadIcon" /></label>
+                                <input type="file" id="file"  style={{display:"none"}} />
+                            </div>
+                            <button className="userUpdateButton">UPDATE</button>
+                        </div>
+                          */}
+
+                       
                     </div>
+
+
                 </div>
             </div>
+
+
         </div>
     </div>
   )
