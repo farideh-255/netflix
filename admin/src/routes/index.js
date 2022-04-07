@@ -17,6 +17,7 @@ import Login from '../pages/login/Login'
 import { AuthContext } from '../context/authcontext/authContext.jsx';
 import ItemsList from '../pages/products/products.jsx';
 import Product from '../pages/product/index.jsx';
+import NewMovie from '../pages/product/NewMovie.jsx';
 
 
 
@@ -39,6 +40,7 @@ const RoutesComp = (props) => {
                         <Route path="/newuser"  element={ user ? <NewUserPage /> : <Login /> } />                  
                         <Route path="/movies"  element={ user ? <ItemsList /> : <Login /> } />
                         <Route path="/movie/:id"  element={ user ? <Product /> : <Login /> } />                  
+                        <Route path="/movie/newmovie"  element={ user ? <NewMovie /> : <Login /> } />                  
                 
                 </Routes>
     )
